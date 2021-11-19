@@ -4,22 +4,22 @@ const MyOrders = () => {
   const email = sessionStorage.getItem("email");
   const [services, setServices] = useState([]);
 
-  const [control, setControl] = useState(false);
+  const [cancelOrder, setcancelOrder] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
-  }, [control]);
+  }, [cancelOrder]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delteOrder/${id}`, {
+    fetch(`http://localhost:5000/cancelOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {
-          setControl(!control);
+          setcancelOrder(!cancelOrder);
         }
       });
     console.log(id);
