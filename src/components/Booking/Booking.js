@@ -11,7 +11,7 @@ const Booking = () => {
   useEffect(() => {
     fetch(`http://localhost:5000/singleProduct/${serviceId}`)
       .then((res) => res.json())
-      .then((data) => setService(data));
+      .then((data) => setService(data))
   }, []);
 
   console.log(service);
@@ -23,7 +23,7 @@ const Booking = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    data.email = email;
+     data.email = email;
     data.status = "pending";
 
     fetch("http://localhost:5000/confirmOrder", {
@@ -32,7 +32,7 @@ const Booking = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => console.log(result)); 
     console.log(data);
   };
 
@@ -40,7 +40,7 @@ const Booking = () => {
     <div>
       <h1>THis is Booking</h1>
 
-      <div className="booking-container">
+       <div className="booking-container">
         <div className="row container">
           <div className="col-md-6">
             <div className="details-img">
