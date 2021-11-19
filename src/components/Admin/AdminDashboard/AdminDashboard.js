@@ -26,7 +26,6 @@ const AdminDashboard = () => {
                   >
                     Add Services
                   </li>
-
                   <li
                     onClick={() => setControl("services")}
                     className="admin-menu p-2"
@@ -51,6 +50,7 @@ const AdminDashboard = () => {
             <div className="col-md-9 text-center  text-center">
               <h1>render your components</h1>
 
+              
               {control === "services" && <Services></Services>}
               {control === "MangeOrder" && <MangeOrder></MangeOrder>}
               {control === "addServices" && <AddServices></AddServices>}
