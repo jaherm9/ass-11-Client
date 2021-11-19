@@ -1,100 +1,46 @@
-import React from "react";
-import "./Footer.css";
-import ReactDOM from "react-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookSquare,
-  faInstagramSquare,
-  faTwitterSquare,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faCoffee,
-  faPhoneVolume,
-  faMapMarkedAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  return (
-    <div>
-      <div className="footer-container">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-5">
-              <div className="left-container text-start">
-                <h1>Biona Sports Club</h1>
-                <div className="icons-container d-flex text-center ">
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faInstagramSquare} />
-                  </div>
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faTwitterSquare} />
-                  </div>
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faYoutube} />
-                  </div>
-                  <div className="icon">
-                    <FontAwesomeIcon icon={faFacebookSquare} />
-                  </div>
+    return (
+        <footer className='bg-color py-3'>
+            <div className='container'>
+                <div className='row footer-top py-5'>
+                    <div className='col-md-6 mb-5'>
+                        <img src="https://i.ibb.co/9hGFvYS/logo.png" alt="white-logo" />
+                    </div>
+                    <div className='col-md-3'>
+                        <ul className='list-unstyled'>
+                            <li><Link to='/about'>About Online Food</Link></li>
+                            <li><Link to='/blog'>Read Our Blog</Link></li>
+                            <li><Link to='/signup'>Sign up to deliver</Link></li>
+                            <li><Link to='/restaurants'>Add your restaurant</Link></li>
+                        </ul>
+                    </div>
+                    <div className='col-md-3'>
+                        <ul className="list-unstyled">
+                            <li><Link to='/help'>Get Help</Link></li>
+                            <li><Link to='/faq'>Read FAQ</Link></li>
+                            <li><Link to='/cities'>View All Cities</Link></li>
+                            <li><Link to='/restaurants'>Restaurants near me</Link></li>
+                        </ul>
+                    </div>
                 </div>
-                <p className="mt-4 ">
-                  <small>
-                    *These statements have not been evaluated by the Food and
-                    Drug Administration. These products are not intended to
-                    diagnose.
-                  </small>
-                </p>
 
-                <p className="mt-5">
-                  <small>Zemez © . All rights reserved.</small>
-                </p>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div className="footer-menu-container">
-                <ul>
-                  <li className="footer-menu">Home</li>
-                  <li className="footer-menu">Services</li>
-                  <li className="footer-menu">Sports</li>
-                  <li className="footer-menu">Contact us</li>
-                  <li className="footer-menu"> About us</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-5">
-              <div className="right-footer-container">
-                <h3>Sign up for the newsletter</h3>
-                <input
-                  className="footer-input"
-                  type="text"
-                  placeholder="Enter Email"
-                />
-                <div className="phone d-flex align-items-center justify-content-center mt-4">
-                  <div className="foter-phone-icon">
-                    <FontAwesomeIcon icon={faPhoneVolume} />
-                  </div>
-                  <div>
-                    <h5>+1 8 800 555 35 35</h5>
-                  </div>
+                <div className='footer-bottom d-flex justify-content-between'>
+                    <small className='text-secondary'>Copyright &copy; 2021 Food Buz Online Food. Proudly created by <span>❤️</span>
+                        <span><a className='text-color' href="https://github.com/"> Techno Soft Ltd.</a></span>
+                    </small>
+                    <ul className="list-inline">
+                        <li className="list-inline-item ml-3"><Link to='/policy'>Privacy Policy</Link></li>
+                        <li className="list-inline-item  ml-3"><Link to='/terms'>Terms of Use</Link></li>
+                        <li className="list-inline-item  ml-3"><Link to='/pricing'>Pricing</Link></li>
+                    </ul>
                 </div>
-                <div className="map d-flex align-items-center justify-content-center">
-                  <div className="foter-phone-icon">
-                    <FontAwesomeIcon icon={faMapMarkedAlt} />
-                  </div>
-                  <div>
-                    <p>
-                      160 Broadway, New York, NY 10038,
-                      <br /> 102 1st Avenue, New York, NY 100
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+        </footer>
+    );
 };
 
 export default Footer;

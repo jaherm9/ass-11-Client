@@ -9,11 +9,11 @@ import AllServices from "../AllServices/AllServices";
 const Home = () => {
   return (
     <div>
-      <div className="text-center mt-5"></div>
+      <div className="text-center"></div>
       <Banner></Banner>
       <AllServices></AllServices>
-      <Contact></Contact>
-      <Footer></Footer>
+      
+      
     </div>
   );
 };

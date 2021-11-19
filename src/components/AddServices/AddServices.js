@@ -25,7 +25,7 @@ const AddServices = () => {
   return (
     <div>
       <div>
-        <h1 className="mt-5 text-center text-info">Please Add Services</h1>
+        <h1 className="mt-5 text-center text-info"> Add Foods</h1>
         <div className="login-box w-25 m-auto mt-5">
           <div className="event-box border border d-flex justify-content-center align-items-center">
             <div className="login-form">
@@ -74,8 +74,8 @@ const AddServices = () => {
 
                 <input
                   type="submit"
-                  value="Add"
-                  className="btn btn-info w-50"
+                  value="Insert"
+                  className="btn btn-info w-75"
                 />
               </form>
             </div>
@@ -87,6 +87,3 @@ const AddServices = () => {
 };
 
 export default AddServices;
-
-
-// Nov 3 Special sessoin 30m

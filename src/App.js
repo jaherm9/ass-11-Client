@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Menubar from "./components/Menubar/Menubar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import AdminDashboard from "./components/Admin/AdminDashboard/AdminDashboard";
@@ -10,12 +10,14 @@ import AddServices from "./components/AddServices/AddServices";
 import Services from "./components/Services/Services";
 import MyOrders from "./components/MyOrders/MyOrders";
 import Booking from "./components/Booking/Booking";
+import Contact from "./components/Contact/Contact";
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Menubar></Menubar>
+        <Navbar></Navbar>
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -32,6 +34,9 @@ function App() {
           <Route exact path="/services">
             <Services></Services>
           </Route>
+          <Route exact path="/contact">
+            <Contact></Contact>
+          </Route>
           <Route exact path="/booking/:serviceId">
             <Booking></Booking>
           </Route>
@@ -42,6 +47,7 @@ function App() {
             <AdminDashboard></AdminDashboard>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );

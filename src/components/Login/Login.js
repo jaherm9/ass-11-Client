@@ -11,8 +11,9 @@ const Login = () => {
       <div className="logo">
         <img
           className="p-2 w-25 mb-5"
-          src="https://i.ibb.co/QvMLCj4/Group-1329.png"
-          alt=""
+          src="https://i.ibb.co/XWyV4BG/s5.png"
+          alt="signup"
+         
         />
       </div>
       <div className="login-box w-25 m-auto">

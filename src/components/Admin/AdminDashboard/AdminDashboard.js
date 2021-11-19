@@ -18,19 +18,19 @@ const AdminDashboard = () => {
           <div className="row admin-container">
             <div className="col-md-3 ">
               <div className="admin-area p-1">
-                <h6>Dashboard</h6>
+                <h4>Dashboard</h4>
                 <div className="all-menu mt-5">
                   <li
                     onClick={() => setControl("addServices")}
                     className="admin-menu p-2"
                   >
-                    Add Services
+                    Add Foods
                   </li>
                   <li
                     onClick={() => setControl("services")}
                     className="admin-menu p-2"
                   >
-                    Manage Services
+                    Manage Foods
                   </li>
                   <li
                     onClick={() => setControl("MangeOrder")}
@@ -47,10 +47,7 @@ const AdminDashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-9 text-center  text-center">
-              <h1>render your components</h1>
-
-              
+            <div className="col-md-9 text-center  text-center">         
               {control === "services" && <Services></Services>}
               {control === "MangeOrder" && <MangeOrder></MangeOrder>}
               {control === "addServices" && <AddServices></AddServices>}

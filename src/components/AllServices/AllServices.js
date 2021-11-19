@@ -12,7 +12,7 @@ const AllServices = () => {
 
   return (
     <div className="p-3">
-      <h1>All Services</h1>
+      <h1>Wow! 75% off to Get!</h1>
       <div className="services">
         <div className="row container">
           {services?.map((pd) => (
